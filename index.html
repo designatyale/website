@@ -1,10 +1,89 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>Design at Yale</title>
-</head>
-<body>
 
+<!DOCTYPE html>
+<!--[if lte IE 6]><html class="preIE7 preIE8 preIE9"><![endif]-->
+<!--[if IE 7]><html class="preIE8 preIE9"><![endif]-->
+<!--[if IE 8]><html class="preIE9"><![endif]-->
+<!--[if gte IE 9]><!--><html><!--<![endif]-->
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Design at Yale</title>
+  <link rel="stylesheet" href="reset.css" type="text/css">
+  <link rel="stylesheet" href="main.css" type="text/css">
+  
+  
+  <script type="text/javascript">
+  var tick;
+  function stop() {
+  clearTimeout(tick);
+  }
+  function clock() {
+  var ut=new Date();
+  var h,m,s;
+  var time="        ";
+  h=ut.getHours();
+  m=ut.getMinutes();
+  s=ut.getSeconds();
+  if(s<=9) s="0"+s;
+  if(m<=9) m="0"+m;
+  if(h<=9) h="0"+h;
+  time+=h+":"+m+":"+s;
+  document.getElementById('clock').innerHTML=time;
+  tick=setTimeout("clock()",1000); 
+  }
+</script>
+  
+  
+</head>
+<body onload="clock();" onunload="stop();">
+
+  <div id="wrapper">
+    
+    <div id="time">
+      <p id="clock"></p>
+    </div>
+  
+    <div class="main">
+    <h1>Design at Yale</h1>
+    <p>DAY is an undergraduate design organization at Yale University. We were previously known as User Experience Society, now making a more intentional shift to welcome all designers.</p>
+      
+      <div class="links">
+        <a href="https://designatyale.com/interest">Interest Form for 2021–2022</a>
+        <a href="https://www.facebook.com/uxsocietyyale">Facebook</a>
+        <a href="http://instagram.com/day.yale">Instagram (@day.yale)</a>
+        <a href="http://twitter.com/designatyale">Twitter (@designatyale)</a>
+        <a href="mailto:uxsocietyyale@gmail.com">Email</a>
+      
+      </div>
+      
+    </div>
+    
+    <div id="newsletter">
+    
+        <div id="newsletter-container">
+            
+            <h3>subscribe to our newsletter</h3>
+        <div class="newsletter">
+            
+            <!-- Begin Mailchimp Signup Form -->
+<div id="mc_embed_signup">
+<form action="https://gmail.us20.list-manage.com/subscribe/post?u=5d9deb15439ca8c25e27f2744&amp;id=3a9365ecce" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>	
+
+	<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+
+        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_5d9deb15439ca8c25e27f2744_3a9365ecce" tabindex="-1" value=""></div>
+    <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+</form>
+</div>
+
+<!--End mc_embed_signup-->
+            
+        </div>
+            
+    </div>
+    </div>
+  
+  </div>
 </body>
 </html>
