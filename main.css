@@ -4,8 +4,7 @@ body{
   background-attachment: fixed;
   background-position: center bottom;
   
-  
-  font-family: Camphor, Open Sans, Segoe UI, sans-serif;
+  font-family: Camphor, Helvetica, Arial, Open Sans, Segoe UI, sans-serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -78,9 +77,13 @@ body{
 }
 
 .links a:hover{
-  color: blue;
+  color: black;
 }
 
 p{
   line-height: 120%;
+}
+
+input:focus {
+  outline: none;
 }
